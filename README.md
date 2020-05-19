@@ -10,7 +10,7 @@
 |password confirmation|integer|null: false|
 
 ### Association
-has_many :groups
+has_many :groups_users
 has_many :groups. through: :groups_users
 has-many :chat
 
@@ -21,8 +21,8 @@ has-many :chat
 |groups|string|null: false, foreign_key: true|
 
 ### Association
-has-many :groups
-has-many :users
+belong_to :group
+belong_to :user
 
 ## chat
 |Column|Type|Options|
@@ -33,8 +33,8 @@ has-many :users
 |user_id|integer|null: false, foreign_key: true|
 
 ### Association
-has-many :groups
-belongs_to :users
+belongs_to :group
+belongs_to :user
 
 ## groups
 |Column|Type|Options|
@@ -43,6 +43,6 @@ belongs_to :users
 |group_name|string|null: false|
 
 ### Association
-has_many: users
+has_many: groups_users
 has_many: users through: :groups_users
 belongs_to :chat
