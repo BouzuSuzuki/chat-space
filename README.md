@@ -21,8 +21,8 @@ has-many :chat
 |groups|string|null: false, foreign_key: true|
 
 ### Association
-belong_to :group
-belong_to :user
+belongs_to :group
+belongs_to :user
 
 ## chat
 |Column|Type|Options|
