@@ -27,6 +27,12 @@ a {
       &__icon {
         line-height: 20px;
         color: #ffffff;
+        .cog {
+          color: white;
+        }
+        // .icon {
+        //   display:none;
+        // }
       }
     }
   }
@@ -129,7 +135,7 @@ a {
           font-size: 1.3rem;
           position: absolute;
           top: 10px;
-          right: 130px;
+          right: 170px;
           .file {
             display:none;
           }

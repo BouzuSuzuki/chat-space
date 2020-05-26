@@ -2,10 +2,11 @@
   .sid-bar__user-name
     .sid-bar__user-name__sid-box
       .sid-bar__user-name__sid-box__user_name
-        masa
+        = current_user.name
       .sid-bar__user-name__sid-box__icon
         %i.far.fa-edit
-        %i.fas.fa-cog
+          = link_to edit_user_path(current_user), class: "cog" do
+            %i.fas.fa-cog
   .sid-bar__group-list
     .sid-bar__group-list__group-name
       aaaa
