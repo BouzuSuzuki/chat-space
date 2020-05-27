@@ -27,27 +27,26 @@ a {
       &__icon {
         line-height: 20px;
         color: #ffffff;
-        .cog {
+        a {
           color: white;
         }
-        // .icon {
-        //   display:none;
-        // }
       }
     }
   }
-  &__group-list {
+  &__group {
+    &__list {
     background-color: #2f3e51;
     height:  calc(100vh - 100px);
     padding: 20px 20px 0px;
-    &__group-name {
-      font-size: 15px;
-      margin: 0px 0px 5px;
-      color: #ffffff;
-    }
-    &__group-nill {
-        font-size: 11px;
+      &__group-name {
+        font-size: 15px;
+        margin: 0px 0px 5px;
         color: #ffffff;
+      }
+      &__group-nill {
+          font-size: 11px;
+          color: #ffffff;
+      }
     }
   }
 }

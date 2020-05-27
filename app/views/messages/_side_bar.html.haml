@@ -4,11 +4,19 @@
       .sid-bar__user-name__sid-box__user_name
         = current_user.name
       .sid-bar__user-name__sid-box__icon
-        %i.far.fa-edit
-          = link_to edit_user_path(current_user), class: "cog" do
-            %i.fas.fa-cog
-  .sid-bar__group-list
-    .sid-bar__group-list__group-name
-      aaaa
-    .sid-bar__group-list__group-nill
-      まだメッセージがありません
+        = link_to new_group_path do 
+          %i.far.fa-edit
+        = link_to edit_user_path(current_user), class: "cog" do
+          %i.fas.fa-cog
+  .sid-bar__group
+    - current_user.groups.each do |group|
+      .sid-bar__group__list
+        = link_to '#' do
+          .sid-bar__group__list__group-name
+            = group.name
+          .sid-bar__group__list__group-nill
+            メッセージはまだありません。
+    -# .sid-bar__group-list__group-name
+    -#   aaaa
+    -# .sid-bar__group-list__group-nill
+    -#   まだメッセージがありません
