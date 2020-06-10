@@ -80,10 +80,5 @@ group :development, :test do
   gem 'capistrano3-unicorn'
 end
 
-group :debelopment do
-  gem 'web-console', '~>2.0'
-  gem 'spring'
-end
-
 gem 'carrierwave'
 gem 'fog-aws'
