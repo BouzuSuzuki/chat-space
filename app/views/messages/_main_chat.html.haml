@@ -3,7 +3,7 @@
     .chat-main__group-info__left-box
       .chat-main__group-info__left-box__current-group
         = @group.name
-      .left-header__members
+      .chat-main__group-info__left-box__members
         Member：
         - @group.users.each do |user|
           = user.name
